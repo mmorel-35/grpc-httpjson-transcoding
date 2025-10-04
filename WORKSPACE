@@ -52,35 +52,6 @@ load("@rules_fuzzing//fuzzing:init.bzl", "rules_fuzzing_init")
 
 rules_fuzzing_init()
 
-http_archive(
-    name = "rules_cc",
-    urls = ["https://github.com/bazelbuild/rules_cc/releases/download/0.0.16/rules_cc-0.0.16.tar.gz"],
-    sha256 = "bbf1ae2f83305b7053b11e4467d317a7ba3517a12cef608543c1b1c5bf48a4df",
-    strip_prefix = "rules_cc-0.0.16",
-)
-
-http_archive(
-    name = "rules_python",
-    sha256 = "d70cd72a7a4880f0000a6346253414825c19cdd40a28289bdf67b8e6480edff8",
-    strip_prefix = "rules_python-0.28.0",
-    url = "https://github.com/bazelbuild/rules_python/releases/download/0.28.0/rules_python-0.28.0.tar.gz",
-)
-
-http_archive(
-    name = "rules_proto",
-    sha256 = "6fb6767d1bef535310547e03247f7518b03487740c11b6c6adb7952033fe1295",
-    strip_prefix = "rules_proto-6.0.2",
-    url = "https://github.com/bazelbuild/rules_proto/releases/download/6.0.2/rules_proto-6.0.2.tar.gz",
-)
-
-load("@rules_proto//proto:repositories.bzl", "rules_proto_dependencies")
-
-rules_proto_dependencies()
-
-load("@rules_python//python:repositories.bzl", "py_repositories")
-
-py_repositories()
-
 protobuf_repositories()
 
 load("@com_google_protobuf//:protobuf_deps.bzl", "protobuf_deps")
@@ -116,6 +87,10 @@ load(
 
 _cc_image_repos()
 # END io_bazel_rules_docker
+
+load("@rules_proto//proto:repositories.bzl", "rules_proto_toolchains")
+
+rules_proto_toolchains()
 
 load("@com_google_googleapis//:repository_rules.bzl", "switched_rules_by_language")
 
