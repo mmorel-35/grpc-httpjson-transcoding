@@ -18,7 +18,7 @@ bazel_dep(name = "proto-converter", repo_name = "com_google_protoconverter")
 
 git_override(
     module_name = "proto-converter",
-    commit = "3f393212800d011296e116b38435f4374d714d73",
+    commit = "2458ed8ea405b47c1960f0b0af211efdf0e057a0",
     remote = "https://github.com/mmorel-35/proto-converter.git",
 )
 

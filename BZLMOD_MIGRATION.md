@@ -19,7 +19,7 @@ All dependencies have been added to MODULE.bazel with versions aligned as closel
 | nlohmann_json | 3.11.3 | 3.11.3 | ✅ Aligned |
 | googleapis | 0.0.0-20250826-a92cee39 | 1d5522ad10 (Sept 2020) | ⚠️ Different |
 | googleapis-cc | 1.0.0 | N/A | ✅ Added for bzlmod |
-| proto-converter | 3f393212 (mmorel-35) | 3f393212 (mmorel-35) | ✅ Aligned |
+| proto-converter | 2458ed8 (mmorel-35) | 2458ed8 (mmorel-35) | ✅ Aligned |
 | rules_cc | 0.1.1 | Provided by rules_fuzzing | ⚠️ Different |
 
 ### Known Issues
@@ -81,7 +81,7 @@ bazel build --noenable_bzlmod //src:all
 
 - **proto-converter (mmorel-35/proto-converter):** Needs compilation fix for gcc warning
   - Branch: bzlmod
-  - Commit: 3f393212800d011296e116b38435f4374d714d73
+  - Commit: 2458ed8ea405b47c1960f0b0af211efdf0e057a0
 
 ## References
 

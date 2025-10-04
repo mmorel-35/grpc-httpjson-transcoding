@@ -91,7 +91,7 @@ def io_bazel_rules_docker():
 def protoconverter_repositories():
     http_archive(
         name = "com_google_protoconverter",
-        sha256 = "3cd4977167c6e572f721481b8e3e9847de6d99b6a3f24981b7bd39d3a2972a59",
-        strip_prefix = "proto-converter-3f393212800d011296e116b38435f4374d714d73",
-        urls = ["https://github.com/mmorel-35/proto-converter/archive/3f393212800d011296e116b38435f4374d714d73.zip"],
+        sha256 = "17c49df769dcd505a57fc99136075f1a1f8418ab03914faf7af692772ce54d54",
+        strip_prefix = "proto-converter-2458ed8ea405b47c1960f0b0af211efdf0e057a0",
+        urls = ["https://github.com/mmorel-35/proto-converter/archive/2458ed8ea405b47c1960f0b0af211efdf0e057a0.zip"],
     )
