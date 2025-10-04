@@ -24,8 +24,8 @@ def absl_repositories():
         urls = ["https://github.com/abseil/abseil-cpp/archive/c2435f8342c2d0ed8101cb43adfd605fdc52dca2.zip"],
     )
 
-PROTOBUF_COMMIT = "315ffb5be89460f2857387d20aefc59b76b8bdc3"  # May 31, 2023
-PROTOBUF_SHA256 = "aa61db6ff113a1c76eac9408144c6e996c5e2d6b2410818fd7f1b0d222a50bf8"
+PROTOBUF_COMMIT = "b407e8416e3893036aee5af9a12bd9b6a0e2b2e6"  # v29.3: Oct 2, 2025
+PROTOBUF_SHA256 = "55912546338433f465a552e9ef09930c63b9eb697053937416890cff83a8622d"
 
 def protobuf_repositories():
     http_archive(
@@ -91,7 +91,7 @@ def io_bazel_rules_docker():
 def protoconverter_repositories():
     http_archive(
         name = "com_google_protoconverter",
-        sha256 = "6081836fa3838ebb1aa15089a5c3e20f877a0244c7a39b92a2000efb40408dcb",
-        strip_prefix = "proto-converter-d77ff301f48bf2e7a0f8935315e847c1a8e00017",
-        urls = ["https://github.com/grpc-ecosystem/proto-converter/archive/d77ff301f48bf2e7a0f8935315e847c1a8e00017.zip"],
+        sha256 = "3cd4977167c6e572f721481b8e3e9847de6d99b6a3f24981b7bd39d3a2972a59",
+        strip_prefix = "proto-converter-3f393212800d011296e116b38435f4374d714d73",
+        urls = ["https://github.com/mmorel-35/proto-converter/archive/3f393212800d011296e116b38435f4374d714d73.zip"],
     )
