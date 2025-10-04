@@ -48,8 +48,8 @@ def googletest_repositories():
         sha256 = GOOGLETEST_SHA256,
     )
 
-GOOGLEAPIS_COMMIT = "1d5522ad1056f16a6d593b8f3038d831e64daeea"  # Sept 03, 2020
-GOOGLEAPIS_SHA256 = "cd13e547cffaad217c942084fd5ae0985a293d0cce3e788c20796e5e2ea54758"
+GOOGLEAPIS_COMMIT = "a92cee399e0fc8afa2d460373b1085f543bc8d3f"  # Aug 26, 2025
+GOOGLEAPIS_SHA256 = "468056c3244b7a4f6a575a135b6b6dde280a3f219203a01c4a09d0cf504a4ba6"
 
 def googleapis_repositories():
     http_archive(
@@ -59,8 +59,8 @@ def googleapis_repositories():
         sha256 = GOOGLEAPIS_SHA256,
     )
 
-GOOGLEBENCHMARK_COMMIT = "1.7.0"  # Jul 25, 2022
-GOOGLEBENCHMARK_SHA256 = "3aff99169fa8bdee356eaa1f691e835a6e57b1efeadb8a0f9f228531158246ac"
+GOOGLEBENCHMARK_COMMIT = "1.8.3"  # Jan 11, 2024
+GOOGLEBENCHMARK_SHA256 = "6bc180a57d23d4d9515519f92b0c83d61b05b5bab188961f36ac7b06b0d9e9ce"
 
 def googlebenchmark_repositories():
     http_archive(

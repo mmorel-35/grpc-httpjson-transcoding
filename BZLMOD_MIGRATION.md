@@ -15,12 +15,12 @@ All dependencies have been added to MODULE.bazel with versions aligned as closel
 | abseil-cpp | 20240116.2 | 4a2c63365e (LTS 20240116.0) | ✅ Aligned |
 | protobuf | 29.3 | b407e8416e (v29.3) | ✅ Aligned |
 | googletest | 1.14.0 | f8d7d77c06 (v1.14.0) | ✅ Aligned |
-| google_benchmark | 1.8.3 | 1.7.0 | ⚠️ Close (1.8.3 vs 1.7.0) |
+| google_benchmark | 1.8.3 | 1.8.3 | ✅ Aligned |
 | nlohmann_json | 3.11.3 | 3.11.3 | ✅ Aligned |
-| googleapis | 0.0.0-20250826-a92cee39 | 1d5522ad10 (Sept 2020) | ⚠️ Different |
+| googleapis | 0.0.0-20250826-a92cee39 | a92cee399e (Aug 26, 2025) | ✅ Aligned |
 | googleapis-cc | 1.0.0 | N/A | ✅ Added for bzlmod |
 | proto-converter | 2458ed8 (mmorel-35) | 2458ed8 (mmorel-35) | ✅ Aligned |
-| rules_cc | 0.1.1 | Provided by rules_fuzzing | ⚠️ Different |
+| rules_cc | 0.1.1 | 0.1.1 | ✅ Aligned |
 
 ### Known Issues
 
