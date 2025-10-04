@@ -19,13 +19,13 @@ load("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive")
 def absl_repositories():
     http_archive(
         name = "com_google_absl",
-        sha256 = "ea1d31db00eb37e607bfda17ffac09064670ddf05da067944c4766f517876390",
-        strip_prefix = "abseil-cpp-c2435f8342c2d0ed8101cb43adfd605fdc52dca2",  # May 04, 2023.
-        urls = ["https://github.com/abseil/abseil-cpp/archive/c2435f8342c2d0ed8101cb43adfd605fdc52dca2.zip"],
+        sha256 = "f49929d22751bf70dd61922fb1fd05eb7aec5e7a7f870beece79a6e28f0a06c1",
+        strip_prefix = "abseil-cpp-4a2c63365eff8823a5221db86ef490e828306f9d",  # Abseil LTS 20240116.0
+        urls = ["https://github.com/abseil/abseil-cpp/archive/4a2c63365eff8823a5221db86ef490e828306f9d.zip"],
     )
 
-PROTOBUF_COMMIT = "315ffb5be89460f2857387d20aefc59b76b8bdc3"  # May 31, 2023
-PROTOBUF_SHA256 = "aa61db6ff113a1c76eac9408144c6e996c5e2d6b2410818fd7f1b0d222a50bf8"
+PROTOBUF_COMMIT = "b407e8416e3893036aee5af9a12bd9b6a0e2b2e6"  # v29.3: Oct 2, 2025
+PROTOBUF_SHA256 = "55912546338433f465a552e9ef09930c63b9eb697053937416890cff83a8622d"
 
 def protobuf_repositories():
     http_archive(
@@ -48,8 +48,8 @@ def googletest_repositories():
         sha256 = GOOGLETEST_SHA256,
     )
 
-GOOGLEAPIS_COMMIT = "1d5522ad1056f16a6d593b8f3038d831e64daeea"  # Sept 03, 2020
-GOOGLEAPIS_SHA256 = "cd13e547cffaad217c942084fd5ae0985a293d0cce3e788c20796e5e2ea54758"
+GOOGLEAPIS_COMMIT = "a92cee399e0fc8afa2d460373b1085f543bc8d3f"  # Aug 26, 2025
+GOOGLEAPIS_SHA256 = "468056c3244b7a4f6a575a135b6b6dde280a3f219203a01c4a09d0cf504a4ba6"
 
 def googleapis_repositories():
     http_archive(
@@ -59,8 +59,8 @@ def googleapis_repositories():
         sha256 = GOOGLEAPIS_SHA256,
     )
 
-GOOGLEBENCHMARK_COMMIT = "1.7.0"  # Jul 25, 2022
-GOOGLEBENCHMARK_SHA256 = "3aff99169fa8bdee356eaa1f691e835a6e57b1efeadb8a0f9f228531158246ac"
+GOOGLEBENCHMARK_COMMIT = "1.8.3"  # Jan 11, 2024
+GOOGLEBENCHMARK_SHA256 = "6bc180a57d23d4d9515519f92b0c83d61b05b5bab188961f36ac7b06b0d9e9ce"
 
 def googlebenchmark_repositories():
     http_archive(
@@ -91,7 +91,7 @@ def io_bazel_rules_docker():
 def protoconverter_repositories():
     http_archive(
         name = "com_google_protoconverter",
-        sha256 = "6081836fa3838ebb1aa15089a5c3e20f877a0244c7a39b92a2000efb40408dcb",
-        strip_prefix = "proto-converter-d77ff301f48bf2e7a0f8935315e847c1a8e00017",
-        urls = ["https://github.com/grpc-ecosystem/proto-converter/archive/d77ff301f48bf2e7a0f8935315e847c1a8e00017.zip"],
+        sha256 = "17c49df769dcd505a57fc99136075f1a1f8418ab03914faf7af692772ce54d54",
+        strip_prefix = "proto-converter-2458ed8ea405b47c1960f0b0af211efdf0e057a0",
+        urls = ["https://github.com/mmorel-35/proto-converter/archive/2458ed8ea405b47c1960f0b0af211efdf0e057a0.zip"],
     )
