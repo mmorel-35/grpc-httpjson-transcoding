@@ -19,13 +19,13 @@ load("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive")
 def absl_repositories():
     http_archive(
         name = "com_google_absl",
-        sha256 = "ea1d31db00eb37e607bfda17ffac09064670ddf05da067944c4766f517876390",
-        strip_prefix = "abseil-cpp-c2435f8342c2d0ed8101cb43adfd605fdc52dca2",  # May 04, 2023.
-        urls = ["https://github.com/abseil/abseil-cpp/archive/c2435f8342c2d0ed8101cb43adfd605fdc52dca2.zip"],
+        sha256 = "f49929d22751bf70dd61922fb1fd05eb7aec5e7a7f870beece79a6e28f0a06c1",
+        strip_prefix = "abseil-cpp-4a2c63365eff8823a5221db86ef490e828306f9d",  # Abseil LTS 20240116.0
+        urls = ["https://github.com/abseil/abseil-cpp/archive/4a2c63365eff8823a5221db86ef490e828306f9d.zip"],
     )
 
-PROTOBUF_COMMIT = "315ffb5be89460f2857387d20aefc59b76b8bdc3"  # May 31, 2023 (compatible with WORKSPACE mode)
-PROTOBUF_SHA256 = "aa61db6ff113a1c76eac9408144c6e996c5e2d6b2410818fd7f1b0d222a50bf8"
+PROTOBUF_COMMIT = "b407e8416e3893036aee5af9a12bd9b6a0e2b2e6"  # v29.3: Oct 2, 2025
+PROTOBUF_SHA256 = "55912546338433f465a552e9ef09930c63b9eb697053937416890cff83a8622d"
 
 def protobuf_repositories():
     http_archive(

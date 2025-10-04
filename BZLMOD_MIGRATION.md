@@ -12,8 +12,8 @@ All dependencies have been added to MODULE.bazel with versions aligned as closel
 
 | Dependency | MODULE.bazel Version | WORKSPACE Version | Status |
 |------------|---------------------|-------------------|---------|
-| abseil-cpp | 20230802.1 | c2435f8342 (May 2023) | ✅ Aligned |
-| protobuf | 29.3 | 315ffb5be89 (May 2023) | ⚠️ Different (see below) |
+| abseil-cpp | 20240116.2 | 4a2c63365e (LTS 20240116.0) | ✅ Aligned |
+| protobuf | 29.3 | b407e8416e (v29.3) | ✅ Aligned |
 | googletest | 1.14.0 | f8d7d77c06 (v1.14.0) | ✅ Aligned |
 | google_benchmark | 1.8.3 | 1.7.0 | ⚠️ Close (1.8.3 vs 1.7.0) |
 | nlohmann_json | 3.11.3 | 3.11.3 | ✅ Aligned |
@@ -33,7 +33,7 @@ All dependencies have been added to MODULE.bazel with versions aligned as closel
 error: testing if a concept-id is a valid expression; add 'requires' to check satisfaction [-Werror=missing-requires]
 ```
 
-**Root Cause:** The proto-converter code in commit 3f393212 has a gcc compilation warning that is treated as an error. This is a compiler compatibility issue with newer gcc versions.
+**Root Cause:** The proto-converter code in commit 2458ed8 may have compilation warnings that are treated as errors. This is a compiler compatibility issue with newer gcc versions.
 
 **Location:** `external/proto-converter~/src/google/protobuf/util/converter/utility.cc`
 
@@ -41,18 +41,6 @@ error: testing if a concept-id is a valid expression; add 'requires' to check sa
 1. Fixing the code to satisfy the gcc warning
 2. Adjusting compiler flags to not treat this warning as an error
 3. Updating to a newer commit that has this fix
-
-#### 2. Protobuf Version Mismatch
-
-**Status:** Acceptable difference
-
-**Explanation:**
-- **MODULE.bazel uses protobuf 29.3** (October 2025): Required for bzlmod compatibility, includes modern Bazel infrastructure
-- **WORKSPACE uses protobuf from May 2023**: The old version has BUILD file incompatibilities with Bazel 7.6 (exec_tools attribute issues), but newer versions (28.x, 29.x) require bzlmod infrastructure (rules_python, bazel_features) that creates circular dependencies in WORKSPACE mode
-
-**Impact:** This is a fundamental limitation. Protobuf 29.x is designed for bzlmod and doesn't work well in legacy WORKSPACE mode.
-
-**Recommendation:** Focus on bzlmod migration as the primary build system once proto-converter is fixed.
 
 ## Build Instructions
 
